@@ -1,0 +1,28 @@
+C:\Users\kiro_\Desktop\Othello\Othello-master\Othello-master\bin\Debug\Othello.exe
+C:\Users\kiro_\Desktop\Othello\Othello-master\Othello-master\bin\Debug\Othello.pdb
+C:\Users\kiro_\Desktop\Othello\Othello-master\Othello-master\obj\Debug\Othello.csproj.AssemblyReference.cache
+C:\Users\kiro_\Desktop\Othello\Othello-master\Othello-master\obj\Debug\Othello.MainForm.resources
+C:\Users\kiro_\Desktop\Othello\Othello-master\Othello-master\obj\Debug\Othello.csproj.GenerateResource.cache
+C:\Users\kiro_\Desktop\Othello\Othello-master\Othello-master\obj\Debug\Othello.csproj.CoreCompileInputs.cache
+C:\Users\kiro_\Desktop\Othello\Othello-master\Othello-master\obj\Debug\Othello.exe
+C:\Users\kiro_\Desktop\Othello\Othello-master\Othello-master\obj\Debug\Othello.pdb
+C:\Users\kiro_\Desktop\Othello\Othello-master - agmad wa7ed\Othello-master\bin\Debug\Othello.exe
+C:\Users\kiro_\Desktop\Othello\Othello-master - agmad wa7ed\Othello-master\bin\Debug\Othello.pdb
+C:\Users\kiro_\Desktop\Othello\Othello-master - agmad wa7ed\Othello-master\obj\Debug\Othello.csproj.AssemblyReference.cache
+C:\Users\kiro_\Desktop\Othello\Othello-master - agmad wa7ed\Othello-master\obj\Debug\Othello.MainForm.resources
+C:\Users\kiro_\Desktop\Othello\Othello-master - agmad wa7ed\Othello-master\obj\Debug\Othello.csproj.GenerateResource.cache
+C:\Users\kiro_\Desktop\Othello\Othello-master - agmad wa7ed\Othello-master\obj\Debug\Othello.csproj.CoreCompileInputs.cache
+C:\Users\kiro_\Desktop\Othello\Othello-master - agmad wa7ed\Othello-master\obj\Debug\Othello.exe
+C:\Users\kiro_\Desktop\Othello\Othello-master - agmad wa7ed\Othello-master\obj\Debug\Othello.pdb
+C:\Users\kiro_\Desktop\Othello - repos\Othello-master - agmad wa7ed\Othello-master\bin\Debug\Othello.exe
+C:\Users\kiro_\Desktop\Othello - repos\Othello-master - agmad wa7ed\Othello-master\bin\Debug\Othello.pdb
+C:\Users\kiro_\Desktop\Othello - repos\Othello-master - agmad wa7ed\Othello-master\obj\Debug\Othello.csproj.AssemblyReference.cache
+C:\Users\kiro_\Desktop\Othello - repos\Othello-master - agmad wa7ed\Othello-master\obj\Debug\Othello.MainForm.resources
+C:\Users\kiro_\Desktop\Othello - repos\Othello-master - agmad wa7ed\Othello-master\obj\Debug\Othello.csproj.GenerateResource.cache
+C:\Users\kiro_\Desktop\Othello - repos\Othello-master - agmad wa7ed\Othello-master\obj\Debug\Othello.csproj.CoreCompileInputs.cache
+C:\Users\kiro_\Desktop\Othello - repos\Othello-master - agmad wa7ed\Othello-master\obj\Debug\Othello.exe
+C:\Users\kiro_\Desktop\Othello - repos\Othello-master - agmad wa7ed\Othello-master\obj\Debug\Othello.pdb
+C:\Users\kiro_\Desktop\Othello - repos\Othello-master - agmad wa7ed\Othello-master\bin\Debug\Othello.exe.manifest
+C:\Users\kiro_\Desktop\Othello - repos\Othello-master - agmad wa7ed\Othello-master\bin\Debug\Othello.application
+C:\Users\kiro_\Desktop\Othello - repos\Othello-master - agmad wa7ed\Othello-master\obj\Debug\Othello.exe.manifest
+C:\Users\kiro_\Desktop\Othello - repos\Othello-master - agmad wa7ed\Othello-master\obj\Debug\Othello.application

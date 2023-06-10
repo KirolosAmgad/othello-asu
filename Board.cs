@@ -12,16 +12,18 @@ namespace Othello
 		private int leftMarginDimension, topMarginDimension, sideDimension;
 		public int squareDimension;
 		public bool WhitesTurn = false;
-		private bool previousWhitesTurn = false;
+		public bool previousWhitesTurn = false;
 
 		public MainForm mainForm;
 		private Timer computersTurnTimer = null;
-		public int flipDelay = 100;
+        private Timer computersTurnTimer_black = null;
+        public int flipDelay = 50;
 		public bool cancelFlipping = false;
 		
 		public ComputerPlayer ComputerPlayer = null;
+        public ComputerPlayer ComputerPlayer_black = null;
 
-		public int WhiteCount 
+        public int WhiteCount 
 		{
 			get
 			{
@@ -87,14 +89,35 @@ namespace Othello
 		public void NewGame()
 		{
 			ClearBoard();
-			UpdateStatus();
+			WhitesTurn = false;
+            UpdateStatus();
 
-			if (ComputerPlayer != null && (ComputerPlayer.AmIWhite ^ !WhitesTurn))
+            if (ComputerPlayer != null && (ComputerPlayer.AmIWhite ^ !WhitesTurn))
 			{
 				int row, column;
 				ComputerPlayer.Choose(out row, out column);
 				MakeMove(row, column);
 			}
+			if (ComputerPlayer_black != null && (!ComputerPlayer_black.AmIWhite ^ WhitesTurn))
+			{
+				int row, column;
+                ComputerPlayer_black.Choose(out row, out column);
+				MakeMove(row, column);
+			}
+			//if (ComputerPlayer != null && (!ComputerPlayer.AmIWhite ^ WhitesTurn))
+			//{
+			//    computersTurnTimer = new Timer();
+			//    computersTurnTimer.Interval = flipDelay * 20;
+			//    computersTurnTimer.Tick += new EventHandler(OnComputersTurn);
+			//    computersTurnTimer.Start();
+			//}
+			//if (ComputerPlayer != null && (ComputerPlayer.AmIWhite ^ !WhitesTurn))
+			//{
+			//    computersTurnTimer = new Timer();
+			//    computersTurnTimer.Interval = flipDelay * 20;
+			//    computersTurnTimer.Tick += new EventHandler(OnComputersTurn);
+			//    computersTurnTimer.Start();
+			//}
 		}
 
 		public void UpdateBoardSize(int clientWidth, int clientHeight)
@@ -111,10 +134,10 @@ namespace Othello
 
 		public void Draw(Graphics g)
 		{
-			Brush boardBrush = new SolidBrush(Color.Green);
+			Brush boardBrush = new SolidBrush(Color.Wheat);
 			g.FillRectangle(boardBrush, leftMarginDimension, topMarginDimension, sideDimension, sideDimension);
 
-			Pen pen = new Pen(Color.Black);
+			Pen pen = new Pen(Color.Black); // Margin's color
 			g.DrawRectangle(pen, leftMarginDimension, topMarginDimension, sideDimension, sideDimension);
 
 			squareDimension = sideDimension / 8;
@@ -149,6 +172,8 @@ namespace Othello
 		public void Click(System.Windows.Forms.MouseEventArgs e)
 		{
 			if (ComputerPlayer != null && (ComputerPlayer.AmIWhite ^ !WhitesTurn))
+				return;
+			if (ComputerPlayer_black != null && (!ComputerPlayer_black.AmIWhite ^ WhitesTurn))
 				return;
 
 			Point pointOnBoard = new Point(e.X - leftMarginDimension, e.Y - topMarginDimension);
@@ -223,6 +248,14 @@ namespace Othello
 
 			UpdateStatus();
 
+			if (ComputerPlayer_black != null && (!ComputerPlayer_black.AmIWhite ^ WhitesTurn))
+			{
+				computersTurnTimer_black = new Timer();
+                computersTurnTimer_black.Interval = flipDelay * 20;
+                computersTurnTimer_black.Tick += new EventHandler(OnComputersTurn);
+                computersTurnTimer_black.Start();
+			}
+
 			if (ComputerPlayer != null && (ComputerPlayer.AmIWhite ^ !WhitesTurn))
 			{
 				computersTurnTimer = new Timer();
@@ -230,16 +263,28 @@ namespace Othello
 				computersTurnTimer.Tick += new EventHandler(OnComputersTurn);
 				computersTurnTimer.Start();
 			}
-		}
+
+        }
 
 		public void OnComputersTurn(Object sender, EventArgs e)
 		{
-			computersTurnTimer.Stop();
-			computersTurnTimer = null;
+			if (WhitesTurn)
+			{
+                computersTurnTimer.Stop();
+                computersTurnTimer = null;
 
-			int row, column;
-			ComputerPlayer.Choose(out row, out column);
-			MakeMove(row, column);
+                int row, column;
+                ComputerPlayer.Choose(out row, out column);
+                MakeMove(row, column);
+            }
+			else if (!WhitesTurn) {
+                computersTurnTimer_black.Stop();
+                computersTurnTimer_black = null;
+
+                int row, column;
+                ComputerPlayer_black.Choose(out row, out column);
+                MakeMove(row, column);
+            }
 		}
 
 		private void UpdateStatus()

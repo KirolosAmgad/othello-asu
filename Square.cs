@@ -34,7 +34,7 @@ namespace Othello
 			{
 				case StateEnum.Empty:
 				{
-					Brush brush = new SolidBrush(Color.Green);
+					Brush brush = new SolidBrush(Color.Wheat);
 					g.FillRectangle(brush, -pieceRadius, -pieceRadius, 2*pieceRadius, 2*pieceRadius); 
 					break;
 				}
@@ -90,7 +90,7 @@ namespace Othello
 			Graphics bitmapGraphics = Graphics.FromImage(bitmap);
 			bitmapGraphics.TranslateTransform(board.squareDimension/2, board.squareDimension/2);
 			int pieceRadius = (int)Math.Round(0.4 * board.squareDimension);
-			Brush brush = new SolidBrush(Color.Green);
+			Brush brush = new SolidBrush(Color.Wheat);
 			bitmapGraphics.FillEllipse(brush, -pieceRadius, -pieceRadius, 2 * pieceRadius, 2 * pieceRadius);
 
 			if (state == StateEnum.Black ^ flipAngle < 90)

@@ -92,7 +92,8 @@ namespace Othello
 			{
 				case LevelEnum.Beginner:
 					return 1;
-				case LevelEnum.Intermediate:
+
+                case LevelEnum.Intermediate:
 				{
 					switch (row)
 					{
@@ -161,9 +162,14 @@ namespace Othello
 						}
 					}
 				}
-			}
+                case LevelEnum.Advanced:
+					{
+						// We need here the code of the advanced algorithm
+						return 1; 
+					}
+            }
 
-			return 1;
+            return 1;
 		}	
 	}
 }
