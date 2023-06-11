@@ -2,6 +2,7 @@ using System;
 
 namespace Othello
 {
+
 	public enum LevelEnum {Beginner, Intermediate, Advanced}
 
 	public class ComputerPlayer
@@ -13,7 +14,8 @@ namespace Othello
 
 		public ComputerPlayer() {}
 
-		public void Choose(out int row, out int column)
+
+        public void Choose(out int row, out int column)
 		{
 			int maxScore = -100;
 			row = column = -1;
@@ -86,14 +88,23 @@ namespace Othello
 			return score;
 		}
 
-		private int ScoreSquare(int row, int column)
+        public static int GetRandomNumber()
+        {
+            Random random = new Random();
+            int randomNumber = random.Next(1, 11);
+            return randomNumber;
+        }
+
+        private int ScoreSquare(int row, int column)
 		{
 			switch (Level)
 			{
-				case LevelEnum.Beginner:
-					return 1;
-
+                case LevelEnum.Beginner:
+                    return 1;
                 case LevelEnum.Intermediate:
+					return GetRandomNumber();
+                
+                case LevelEnum.Advanced:
 				{
 					switch (row)
 					{
@@ -162,11 +173,7 @@ namespace Othello
 						}
 					}
 				}
-                case LevelEnum.Advanced:
-					{
-						// We need here the code of the advanced algorithm
-						return 1; 
-					}
+                
             }
 
             return 1;

@@ -20,8 +20,8 @@ namespace Othello
         public int flipDelay = 50;
 		public bool cancelFlipping = false;
 		
-		public ComputerPlayer ComputerPlayer = null;
-        public ComputerPlayer ComputerPlayer_black = null;
+		public ComputerPlayer ComputerPlayer = null; //white computer player
+        public ComputerPlayer ComputerPlayer_black = null;  //black computer player
 
         public int WhiteCount 
 		{
