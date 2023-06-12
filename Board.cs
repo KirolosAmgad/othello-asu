@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.Windows.Forms;
@@ -8,6 +9,8 @@ namespace Othello
 	public class Board
 	{		
 		public Square[,] squares;
+		public int numMoves = 0;
+		public List<Move> LegalMoves = new List<Move>();
 		private Square[,] previousState;
 		private int leftMarginDimension, topMarginDimension, sideDimension;
 		public int squareDimension;
@@ -20,8 +23,9 @@ namespace Othello
         public int flipDelay = 50;
 		public bool cancelFlipping = false;
 		
-		public ComputerPlayer ComputerPlayer = null; //white computer player
-        public ComputerPlayer ComputerPlayer_black = null;  //black computer player
+		public ComputerPlayer ComputerPlayer = null;
+        public ComputerPlayer ComputerPlayer_black = null;
+		public bool GameOver = false;
 
         public int WhiteCount 
 		{
@@ -56,7 +60,11 @@ namespace Othello
 			UpdateStatus();
 		}
 
-		public void ClearBoard()
+        public Board()
+        {
+        }
+
+        public void ClearBoard()
 		{
 			squares = new Square[8,8];
 			previousState = new Square[8,8];
@@ -235,6 +243,7 @@ namespace Othello
 				}
 				else
 				{
+					GameOver = true;
 					if (BlackCount > WhiteCount)
 						System.Windows.Forms.MessageBox.Show(string.Format("Black Wins {0}-{1}", BlackCount, WhiteCount));
 					else if (WhiteCount > BlackCount)
@@ -433,10 +442,21 @@ namespace Othello
 			
 		public void ShowLegalMoves()
 		{
+			Move Legal = new Move();
+			LegalMoves.Equals(0);
+			numMoves = 0;
+
 			for (int row=0; row<8; row++)
 				for (int column=0; column<8; column++)
 					if (IsLegalMove(row, column))
-						squares[row,column].State = StateEnum.LegalMove;
+                    {
+						squares[row, column].State = StateEnum.LegalMove;
+						Legal.x = row;
+						Legal.y = column;
+						LegalMoves.Add(Legal);
+						numMoves++;
+
+					}
 		}
 
 		private void ClearLegalMoves()
@@ -457,6 +477,22 @@ namespace Othello
 
 						g.Restore(graphicsState);
 					}
+		}
+
+		public void copyBoard(Square[,] firstBoard, ref Square[,] copiedBoard)
+
+		{
+			Board newBoard = new Board();
+			//Square[,] copiedBoard = new Square[8, 8];
+			for (int x = 0; x < 8; x++)
+			{
+				for (int y = 0; y < 8; y++)
+				{
+					StateEnum state = firstBoard[x, y].State;
+					copiedBoard[x, y] = new Square(newBoard, x, y);
+					copiedBoard[x, y].State = state;
+				}
+			}
 		}
 	}
 }
