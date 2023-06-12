@@ -4,7 +4,7 @@
   <description asmv2:iconFile="App.ico" xmlns="urn:schemas-microsoft-com:asm.v1" />
   <application />
   <entryPoint>
-    <assemblyIdentity name="Othello" version="1.1.8562.2253" language="neutral" processorArchitecture="msil" />
+    <assemblyIdentity name="Othello" version="1.1.8563.9023" language="neutral" processorArchitecture="msil" />
     <commandLine file="Othello.exe" parameters="" />
   </entryPoint>
   <trustInfo>
@@ -43,14 +43,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Othello.exe" size="33680">
-      <assemblyIdentity name="Othello" version="1.1.8562.2253" language="neutral" processorArchitecture="msil" />
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Othello.exe" size="37776">
+      <assemblyIdentity name="Othello" version="1.1.8563.9023" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>w2jQENpfKGShKPPHd/AzaKmbil0=</dsig:DigestValue>
+        <dsig:DigestValue>5uZWmJl4jrR29/H+89ewv251hLU=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

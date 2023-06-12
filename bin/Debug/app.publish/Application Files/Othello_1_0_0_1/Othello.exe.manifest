@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
+  <asmv1:assemblyIdentity name="Othello.exe" version="1.0.0.1" publicKeyToken="061d56d201d59ef1" language="neutral" processorArchitecture="msil" type="win32" />
+  <description asmv2:iconFile="App.ico" xmlns="urn:schemas-microsoft-com:asm.v1" />
+  <application />
+  <entryPoint>
+    <assemblyIdentity name="Othello" version="1.1.8563.9023" language="neutral" processorArchitecture="msil" />
+    <commandLine file="Othello.exe" parameters="" />
+  </entryPoint>
+  <trustInfo>
+    <security>
+      <applicationRequestMinimum>
+        <PermissionSet Unrestricted="true" ID="Custom" SameSite="site" />
+        <defaultAssemblyRequest permissionSetReference="Custom" />
+      </applicationRequestMinimum>
+      <requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
+        <!--
+          UAC Manifest Options
+          If you want to change the Windows User Account Control level replace the
+          requestedExecutionLevel node with one of the following.
+
+        <requestedExecutionLevel  level="asInvoker" uiAccess="false" />
+        <requestedExecutionLevel  level="requireAdministrator" uiAccess="false" />
+        <requestedExecutionLevel  level="highestAvailable" uiAccess="false" />
+
+         If you want to utilize File and Registry Virtualization for backward
+         compatibility then delete the requestedExecutionLevel node.
+    -->
+        <requestedExecutionLevel level="asInvoker" uiAccess="false" />
+      </requestedPrivileges>
+    </security>
+  </trustInfo>
+  <dependency>
+    <dependentOS>
+      <osVersionInfo>
+        <os majorVersion="4" minorVersion="10" buildNumber="0" servicePackMajor="0" />
+      </osVersionInfo>
+    </dependentOS>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Microsoft.Windows.CommonLanguageRuntime" version="2.0.50727.0" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Othello.exe" size="37776">
+      <assemblyIdentity name="Othello" version="1.1.8563.9023" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>5uZWmJl4jrR29/H+89ewv251hLU=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <file name="App.ico" size="1078">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>EO3qY9etCbmj8onx/omra5iju94=</dsig:DigestValue>
+    </hash>
+  </file>
+<publisherIdentity name="CN=KIRO-PC\kiro_" issuerKeyHash="2d0d5bcc3d3150dcabe340bcce4bf473811af862" /><Signature Id="StrongNameSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>ZS+lpLihaBgtVkO3Ir01fWgj8ew=</DigestValue></Reference></SignedInfo><SignatureValue>nsAk/ju++xsuisnAF08knWFWw88c/5jG/MmPehsGH5oMa/RNloXICOKbX/EdT0C9SzyDOxKcls1UAhReG2p4AxFDglVSMZYYlFF89ZZGp4/dvXZeaBHddVR7Pxz39MkWSpCHqnmIIVEPXvEdP4sdEY2eqas1G2ELn9q7vXyS2DY=</SignatureValue><KeyInfo Id="StrongNameKeyInfo"><KeyValue><RSAKeyValue><Modulus>ut1qS3G6ydxnLkS/VlFquOVUlsZI8M+iIe8xZwdQUbPvCkS/2ghNvGC7LJa0Vxskdfr35r/Z4Mh/lzDrHtVbswZranpjeFXuIGme9UlaAGLhsB5TPjlrNMrf/BSr8BOYAMLGFD3T5hslh7Qs+6tHuRkjwAQHOcai+yFZYkyha5U=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><msrel:RelData xmlns:msrel="http://schemas.microsoft.com/windows/rel/2005/reldata"><r:license xmlns:r="urn:mpeg:mpeg21:2003:01-REL-R-NS" xmlns:as="http://schemas.microsoft.com/windows/pki/2005/Authenticode"><r:grant><as:ManifestInformation Hash="ecf123687d35bd22b743562d1868a1b8a4a52f65" Description="" Url=""><as:assemblyIdentity name="Othello.exe" version="1.0.0.1" publicKeyToken="061d56d201d59ef1" language="neutral" processorArchitecture="msil" type="win32" /></as:ManifestInformation><as:SignedBy /><as:AuthenticodePublisher><as:X509SubjectName>CN=KIRO-PC\kiro_</as:X509SubjectName></as:AuthenticodePublisher></r:grant><r:issuer><Signature Id="AuthenticodeSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>//dWDikLvioZX7RS7lAwEsujgNE=</DigestValue></Reference></SignedInfo><SignatureValue>tx9PP/+OJmQiIY8RfncJJbTWEtXyCnGOzHxY2pNBngqRrpv6DOofYsarlsgrjCVEWwTvs/aoWQuVWZ+9BAIgHPnhPFbsQBEiF90/TS+NQiCmxoz1xxrLXa57RFeTb7+9l7wEjW/M6ccPq4T2q4AYY8ee1FlOhEMnQ212qFugQks=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>ut1qS3G6ydxnLkS/VlFquOVUlsZI8M+iIe8xZwdQUbPvCkS/2ghNvGC7LJa0Vxskdfr35r/Z4Mh/lzDrHtVbswZranpjeFXuIGme9UlaAGLhsB5TPjlrNMrf/BSr8BOYAMLGFD3T5hslh7Qs+6tHuRkjwAQHOcai+yFZYkyha5U=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIIBzTCCATagAwIBAgIQWZLt00iXAIJMXrJKc0QfxDANBgkqhkiG9w0BAQUFADAlMSMwIQYDVQQDHhoASwBJAFIATwAtAFAAQwBcAGsAaQByAG8AXzAeFw0yMzA2MTAyMTQyNThaFw0yNDA2MTAwMzQyNThaMCUxIzAhBgNVBAMeGgBLAEkAUgBPAC0AUABDAFwAawBpAHIAbwBfMIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQC63WpLcbrJ3GcuRL9WUWq45VSWxkjwz6Ih7zFnB1BRs+8KRL/aCE28YLsslrRXGyR1+vfmv9ngyH+XMOse1VuzBmtqemN4Ve4gaZ71SVoAYuGwHlM+OWs0yt/8FKvwE5gAwsYUPdPmGyWHtCz7q0e5GSPABAc5xqL7IVliTKFrlQIDAQABMA0GCSqGSIb3DQEBBQUAA4GBAFqSacpHJdzTbN/ApQCGYS4eTTF1CZWNb14KQj6DVdh4+JU9v3qUroSJ8uWolsaxDlyUqdKm+5sdjIqMiO9NIgBFp9FDaTe873Dgi7oGcMxtLWDIcKfg+HBHcd8ShENj4Lv2RjBnDZZ0HR96QfdmAdoNLr0oiPJz1fVGj+1NtvoG</X509Certificate></X509Data></KeyInfo></Signature></r:issuer></r:license></msrel:RelData></KeyInfo></Signature></asmv1:assembly>
